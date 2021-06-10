@@ -1,0 +1,14 @@
+extends templates/layout
+
+block content
+    h1=pageTitle
+    if errorMessage 
+        span=errorMessage
+    form(method="POST")
+        input(type="text" placeholder="Username" name="username" required)
+        input(type="password" placeholder="Password" name="password" required)
+        input(type="submit" value="Login")
+    hr
+    div 
+        span Don't have an account?
+        a(href="/join") Crate one now &rarr;

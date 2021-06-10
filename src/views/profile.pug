@@ -1,0 +1,11 @@
+extends templates/layout
+
+block content
+  h1=pageTitle
+  nav 
+    ul 
+        if loggedIn
+          li 
+            a(href="/login") Log Out
+  h5 Username: #{loggedInUser.username}
+  h5 Name: #{loggedInUser.name}
